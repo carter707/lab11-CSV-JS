@@ -37,7 +37,9 @@ def div(a, b):
 def log(a, b): 
     if a == 0:
         raise ValueError
-    
+    if b <= 0:
+        raise ValueError
+
     return math.log(b,a) # use math library + raise ValueError
 
 def exp(a, b):
