@@ -57,7 +57,6 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
 
-        self.assertRaises(ValueError, log(0, 5))
         with self.assertRaises(ValueError):
             log(0, 5)
 
