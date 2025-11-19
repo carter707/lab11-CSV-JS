@@ -49,7 +49,7 @@ class TestCalculator(unittest.TestCase):
     #     # use same technique from test_divide_by_zero
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
-            log(8, 0)
+            logarithm(8, 0)
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
@@ -58,7 +58,7 @@ class TestCalculator(unittest.TestCase):
         #     logarithm(0, 5)
 
         with self.assertRaises(ValueError):
-            log(0, 5)
+            logarithm(0, 5)
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))
