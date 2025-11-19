@@ -46,4 +46,4 @@ def log(a, b):
     return math.log(b,a) # use math library + raise ValueError
 
 def exp(a, b):
-    a ** b
+    return a ** b
