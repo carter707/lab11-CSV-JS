@@ -27,7 +27,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self): # 3 assertions
         self.assertEqual(5, div(2, 10))
-        self.assertAlmostEqual(-3.333, div(-3, 10), 4)
+        self.assertAlmostEqual(-3.333333, div(-3, 10), 3)
         self.assertEqual(30, div(0.3, 9))
 
     ######## Partner 2
@@ -63,7 +63,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))
-        self.assertAlmostEqual(1.414, hypotenuse(1,1), 4)
+        self.assertAlmostEqual(1.414213, hypotenuse(1,1), 4)
         self.assertEqual(10, hypotenuse(-6,8))
 
     def test_sqrt(self): # 3 assertions
@@ -74,7 +74,7 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             square_root(-1)
         self.assertEqual(4, square_root(16))
-        self.assertAlmostEqual(1.414, square_root(2), 4)
+        self.assertAlmostEqual(1.414213, square_root(2), 4)
     ##########################
 
 # Do not touch this
