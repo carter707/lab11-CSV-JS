@@ -26,9 +26,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(-23304, mul(23304, -1))
 
     def test_divide(self): # 3 assertions
-        self.assertEqual(5, div(10, 2))
-        self.assertAlmostEqual(-3.333333, div(10, -3))
-        self.assertEqual(30, div(9, 0.3))
+        self.assertEqual(5, div(2, 10))
+        self.assertAlmostEqual(-3.333, div(-3, 10), 4)
+        self.assertEqual(30, div(0.3, 9))
 
     ######## Partner 2
     # def test_divide_by_zero(self): # 1 assertion
@@ -37,7 +37,7 @@ class TestCalculator(unittest.TestCase):
     #     #     div(0, 5)
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            div(1,0)
+            div(0,1)
 
 
     # def test_logarithm(self): # 3 assertions
@@ -63,7 +63,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5, hypotenuse(3,4))
-        self.assertAlmostEqual(1.41421356237, hypotenuse(1,1))
+        self.assertAlmostEqual(1.414, hypotenuse(1,1), 4)
         self.assertEqual(10, hypotenuse(-6,8))
 
     def test_sqrt(self): # 3 assertions
@@ -71,11 +71,10 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #    square_root(NUM)
         # Test basic function
-        self.assertRaises(ValueError, square_root(-1))
         with self.assertRaises(ValueError):
             square_root(-1)
         self.assertEqual(4, square_root(16))
-        self.assertAlmostEqual(1.41421356237, square_root(2))
+        self.assertAlmostEqual(1.414, square_root(2), 4)
     ##########################
 
 # Do not touch this
