@@ -1,3 +1,7 @@
+# https://github.com/carter707/lab11-CSV-JS.git
+# Partner 1: Carter Veit
+# Partner 2: Joshua Stanford
+
 import unittest
 from calculator import *
 
